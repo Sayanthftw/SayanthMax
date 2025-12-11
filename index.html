@@ -1,48 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>My Daily Index | Categories</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-
-    <div class="container">
-        
-        <header class="profile-header">
-            <img src="YOUR_IMAGE_URL.jpg" alt="Profile Picture" class="profile-pic">
-            <h1 class="user-name">SayanthMax</h1>
-        </header>
-        <section class="category-section">
+<section class="contact-section">
             <h2>
-                <i class="fas fa-video category-icon"></i>
-                SayanthMax for The Gamers <3
+                <i class="fas fa-paper-plane contact-icon"></i>
+                CONTACT ME
             </h2>
-            <div class="links-grid">
+            
+            <form action="YOUR_FORMSPREE_UNIQUE_CODE_HERE" method="POST" class="contact-form">
                 
-                <a href="https://www.youtube.com/@SayanthMax" class="link-box">
-                    <span class="link-text">: SayanthMax Youtube</span>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
-
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" name="email" id="email" required placeholder="Enter your email address">
                 </div>
-        </section>
-        </div>
-</body>
-</html>
-...
-            <div class="links-grid">
                 
-                <a href="EXISTING_LINK_URL" class="link-box">
-                    <span class="link-text">Day 4: Yesterday's Project</span>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
-
-                <a href="https://example.com/day5" class="link-box">
-                    <span class="link-text">Day 5: Today's New Tutorial</span>
-                    <i class="fas fa-chevron-right arrow-icon"></i>
-                </a>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-envelope-open-text"></i> Send Email
+                </button>
+            
+            </form>
+        </section>
+        <footer class="site-footer">
+            <p>&copy; 2025 Your Name | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="YOUR_GITHUB_URL" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="YOUR_TWITTER_URL" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-...
+        </footer>
+        </div>
 
+    </body>
+</html>
