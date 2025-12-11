@@ -1,35 +1,91 @@
-<section class="contact-section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAYANTHMAX | Daily Index</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div id="particles-js"></div> 
+
+    <div class="container">
+        
+        <header class="profile-header">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1 class="user-name">SAYANTHMAX</h1>
+            <p class="tagline">DAY BY DAY LOGGING PROJECTS</p>
+        </header>
+
+        <section class="category-section">
             <h2>
-                <i class="fas fa-paper-plane contact-icon"></i>
-                CONTACT ME
+                <i class="fas fa-hammer category-icon"></i>
+                DAILY PROJECTS LOG
             </h2>
-            
-            <form action="YOUR_FORMSPREE_UNIQUE_CODE_HERE" method="POST" class="contact-form">
+            <div class="links-grid">
                 
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" name="email" id="email" required placeholder="Enter your email address">
+                <a href="YOUR_DAILY_LINK_1" class="link-box">
+                    <div class="link-content">
+                        <img src="logo-day-1.gif" alt="Project 1 Logo" class="link-logo">
+                        <span class="link-text">Day 1: Initial Repository Setup</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+
+                <a href="YOUR_DAILY_LINK_2" class="link-box">
+                    <div class="link-content">
+                        <i class="fas fa-code link-icon"></i>
+                        <span class="link-text">Day 2: Implementing CSS Grids</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">
-                    <i class="fas fa-envelope-open-text"></i> Send Email
-                </button>
-            
-            </form>
         </section>
+        
+        <section class="category-section">
+            <h2>
+                <i class="fas fa-microchip category-icon"></i>
+                SOFTWARE & TOOLS
+            </h2>
+            <div class="links-grid">
+                <a href="YOUR_TOOL_LINK" class="link-box">
+                    <div class="link-content">
+                        <i class="fas fa-toolbox link-icon"></i>
+                        <span class="link-text">Today's Essential Tool</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+            </div>
+        </section>
+        
+        
         <footer class="site-footer">
-            <p>&copy; 2025 Your Name | All Rights Reserved</p>
+            <p>&copy; 2025 SAYANTHMAX | Digital Index</p>
             <div class="social-links">
-                <a href="YOUR_GITHUB_URL" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="YOUR_TWITTER_URL" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="YOUR_GITHUB_URL" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="YOUR_DISCORD_INVITE" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="YOUR_YOUTUBE_URL" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </footer>
-        </div>
 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+          console.log('Particles.js loaded.');
+        });
+    </script>
+    
     </body>
 </html>
