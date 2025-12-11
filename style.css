@@ -1,77 +1,178 @@
 /*
 |--------------------------------------------------------------------------
-| CONTACT FORM STYLES
+| BASE & ANIMATED BACKGROUND STYLES
 |--------------------------------------------------------------------------
 */
 
-.contact-section h2 {
-    /* Uses same style as category headings */
-    text-align: center;
-}
-
-.contact-form {
-    padding: 20px;
-    border: 1px solid #444;
-    border-radius: 8px;
-    background-color: #222;
-    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.1); /* Inner shadow for depth */
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #00ffff;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-}
-
-.form-group input, 
-.form-group textarea {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #00ffff; /* Neon border for input fields */
-    border-radius: 5px;
-    background-color: #333; /* Dark input background */
-    color: #f0f0f0;
-    font-family: 'Electrolize', sans-serif;
-    transition: all 0.3s;
-}
-
-.form-group input:focus, 
-.form-group textarea:focus {
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-    border-color: #00ffff;
-}
-
-/* Submit Button Styling */
-.submit-button {
+/* Container for the animated background/snow effect (Requires particles.js) */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #00ffff, #00c3ff);
-    border: none;
-    border-radius: 5px;
-    color: #1a1a1a; /* Dark text for contrast */
-    font-size: 1.1em;
+    height: 100%;
+    background-color: #000000; /* PURE BLACK BASE */
+    z-index: -1; 
+}
+
+body {
+    color: #f0f0f0;
+    font-family: 'Electrolize', sans-serif; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    min-height: 100vh;
+}
+
+/* Custom Cursor Placeholder (Add your custom cursor CSS here) */
+/* body { cursor: url('custom-cursor.png'), auto; } */
+
+
+.container {
+    max-width: 650px; 
+    width: 90%;
+    /* Dark, semi-transparent background to let the snow effect show through */
+    background-color: rgba(10, 10, 10, 0.95); 
+    padding: 30px 35px;
+    border-radius: 12px;
+    /* Strong Metallic/Neon Shadow */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5); 
+    border: 1px solid #00ffff; /* Neon Border */
+    z-index: 10;
+}
+
+/*
+|--------------------------------------------------------------------------
+| PROFILE & HEADER STYLES
+|--------------------------------------------------------------------------
+*/
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    /* Animated Neon Ring */
+    border: 4px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from { box-shadow: 0 0 10px #00ffff; }
+    to { box-shadow: 0 0 25px #00ffff; }
+}
+
+.user-name {
+    font-size: 2em;
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    color: #fff;
+    text-shadow: 0 0 15px #00ffff;
+    margin: 5px 0 0 0;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-.submit-button:hover {
-    background: linear-gradient(90deg, #00e0e0, #00aaff);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-    transform: scale(1.01);
+.tagline {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
-.submit-button i {
-    margin-right: 8px;
+
+/*
+|--------------------------------------------------------------------------
+| CATEGORY & LINK BOX STYLES (GIF/LOGO)
+|--------------------------------------------------------------------------
+*/
+
+.category-section {
+    margin-top: 40px;
+}
+
+.category-section h2 {
+    font-size: 1.3em;
+    color: #00ffff; 
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    border-bottom: 2px solid #00ffff; 
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    
+    /* Strong Metallic Gradient */
+    background: linear-gradient(145deg, #1f1f1f, #111111); 
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f0f0f0;
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+}
+
+.link-logo, .link-icon {
+    width: 35px; 
+    height: 35px;
+    margin-right: 18px;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.link-icon {
+    font-size: 1.8em;
+    color: #00ffff;
+}
+
+.link-text {
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+/* HOVER ANIMATION: Box lift and intense neon glow */
+.link-box:hover {
+    background: linear-gradient(145deg, #252525, #151515); 
+    box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.6); 
+    transform: scale(1.03); 
+    border-color: #00ffff; 
+}
+
+.link-box:hover .link-text {
+    color: #00ffff;
+}
+
+.link-box:hover .link-logo, .link-box:hover .link-icon {
+    transform: rotate(5deg) scale(1.1);
 }
 
 
@@ -82,28 +183,28 @@
 */
 .site-footer {
     text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #00ffff; /* Neon divider */
     font-size: 0.85em;
-    color: #888;
+    color: #666;
 }
 
 .social-links {
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .social-links a {
     color: #00ffff;
-    font-size: 1.8em;
-    margin: 0 10px;
+    font-size: 2em;
+    margin: 0 12px;
     text-decoration: none;
     transition: all 0.3s;
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    text-shadow: 0 0 8px #00ffff;
 }
 
 .social-links a:hover {
     color: #fff;
-    text-shadow: 0 0 15px #00ffff;
-    transform: translateY(-2px);
+    text-shadow: 0 0 20px #00ffff;
+    transform: translateY(-4px);
 }
