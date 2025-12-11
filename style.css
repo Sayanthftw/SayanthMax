@@ -17,7 +17,7 @@
     /* ------------------------------------------------------------------- */
     
     /* Uncomment the lines below to use a GIF or animated background image. */
-    /* NOTE: You must upload the GIF file (e.g., 'your-wallpaper.gif') to your repository. */
+    /* NOTE: You must upload the GIF file (e.g., 'og.gif') to your repository. */
     /*
     background-image: url('og.gif'); 
     background-size: cover; 
@@ -231,3 +231,4 @@ body {
     text-shadow: 0 0 20px #00ffff;
     transform: translateY(-4px);
 }
+
