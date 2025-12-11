@@ -4,36 +4,48 @@
 |--------------------------------------------------------------------------
 */
 
-/* Container for the animated background/GIF */
+/* Container for the animated background/snow effect (Requires particles.js or GIF) */
 #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* *** ACTIVATING GIF WALLPAPER BACKGROUND *** */
-    /* Assumes the GIF is saved in your repository as 'og.gif' */
-    background-image: url('og.gif'); 
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center center;
-    
-    /* PURE BLACK BASE for the animation to show on */
-    background-color: #000000; 
-    
-    z-index: -1; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* ------------------------------------------------------------------- */
+    /* *** OPTION 1: GIF WALLPAPER BACKGROUND *** */
+    /* ------------------------------------------------------------------- */
+    
+    /* Uncomment the lines below to use a GIF or animated background image. */
+    /* NOTE: You must upload the GIF file (e.g., 'your-wallpaper.gif') to your repository. */
+    /*
+    background-image: url('YOUR_WALLPAPER_GIF_NAME.gif'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    */
+    
+    /* ------------------------------------------------------------------- */
+    /* *** OPTION 2: PARTICLES.JS (Snow/Star Effect) *** */
+    /* ------------------------------------------------------------------- */
+    
+    /* If you are using particles.js (snow/star effect), keep these lines: */
+    background-color: #000000; /* PURE BLACK BASE for the animation to show on */
+    
+    /* ------------------------------------------------------------------- */
+    
+    z-index: -1; 
 }
 
 body {
-    color: #f0f0f0;
-    font-family: 'Electrolize', sans-serif; 
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 0;
-    min-height: 100vh;
+    color: #f0f0f0;
+    font-family: 'Electrolize', sans-serif; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    min-height: 100vh;
 }
 
 /* Custom Cursor */
@@ -42,16 +54,16 @@ body {
 
 
 .container {
-    max-width: 650px; 
-    width: 90%;
-    /* Semi-transparent background is essential to see the GIF animation behind it */
-    background-color: rgba(10, 10, 10, 0.95); 
-    padding: 30px 35px;
-    border-radius: 12px;
-    /* Strong Metallic/Neon Shadow */
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5); 
-    border: 1px solid #00ffff; /* Neon Border */
-    z-index: 10;
+    max-width: 650px; 
+    width: 90%;
+    /* Semi-transparent background is essential to see any animation/GIF behind it */
+    background-color: rgba(10, 10, 10, 0.95); 
+    padding: 30px 35px;
+    border-radius: 12px;
+    /* Strong Metallic/Neon Shadow */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5); 
+    border: 1px solid #00ffff; /* Neon Border */
+    z-index: 10;
 }
 
 /*
@@ -60,43 +72,43 @@ body {
 |--------------------------------------------------------------------------
 */
 .profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    /* Animated Neon Ring */
-    border: 4px solid #00ffff;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
-    animation: pulse 2s infinite alternate;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    /* Animated Neon Ring */
+    border: 4px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+    animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
-    from { box-shadow: 0 0 10px #00ffff; }
-    to { box-shadow: 0 0 25px #00ffff; }
+    from { box-shadow: 0 0 10px #00ffff; }
+    to { box-shadow: 0 0 25px #00ffff; }
 }
 
 .user-name {
-    font-size: 2em;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 15px #00ffff;
-    margin: 5px 0 0 0;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 15px #00ffff;
+    margin: 5px 0 0 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .tagline {
-    color: #888;
-    font-size: 0.9em;
-    margin-top: 5px;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
 
@@ -107,83 +119,83 @@ body {
 */
 
 .category-section {
-    margin-top: 40px;
+    margin-top: 40px;
 }
 
 .category-section h2 {
-    font-size: 1.3em;
-    color: #00ffff; 
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
-    border-bottom: 2px solid #00ffff; 
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-align: center;
+    font-size: 1.3em;
+    color: #00ffff; 
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    border-bottom: 2px solid #00ffff; 
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .links-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .link-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 25px;
-    
-    /* Strong Metallic Gradient */
-    background: linear-gradient(145deg, #1f1f1f, #111111); 
-    border: 1px solid #333;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #f0f0f0;
-    
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    
+    /* Strong Metallic Gradient */
+    background: linear-gradient(145deg, #1f1f1f, #111111); 
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f0f0f0;
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .link-content {
-    display: flex;
-    align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .link-logo, .link-icon {
-    width: 35px; 
-    height: 35px;
-    margin-right: 18px;
-    border-radius: 5px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    width: 35px; 
+    height: 35px;
+    margin-right: 18px;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .link-icon {
-    font-size: 1.8em;
-    color: #00ffff;
+    font-size: 1.8em;
+    color: #00ffff;
 }
 
 .link-text {
-    font-weight: 500;
-    font-size: 1.2em;
-    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
 }
 
 /* HOVER ANIMATION: Box lift and intense neon glow */
 .link-box:hover {
-    background: linear-gradient(145deg, #252525, #151515); 
-    box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.6); 
-    transform: scale(1.03); 
-    border-color: #00ffff; 
+    background: linear-gradient(145deg, #252525, #151515); 
+    box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.6); 
+    transform: scale(1.03); 
+    border-color: #00ffff; 
 }
 
 .link-box:hover .link-text {
-    color: #00ffff;
+    color: #00ffff;
 }
 
 .link-box:hover .link-logo, .link-box:hover .link-icon {
-    transform: rotate(5deg) scale(1.1);
+    transform: rotate(5deg) scale(1.1);
 }
 
 
@@ -193,29 +205,29 @@ body {
 |--------------------------------------------------------------------------
 */
 .site-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 25px;
-    border-top: 1px solid #00ffff;
-    font-size: 0.85em;
-    color: #666;
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #00ffff;
+    font-size: 0.85em;
+    color: #666;
 }
 
 .social-links {
-    margin-top: 18px;
+    margin-top: 18px;
 }
 
 .social-links a {
-    color: #00ffff;
-    font-size: 2em;
-    margin: 0 12px;
-    text-decoration: none;
-    transition: all 0.3s;
-    text-shadow: 0 0 8px #00ffff;
+    color: #00ffff;
+    font-size: 2em;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-shadow: 0 0 8px #00ffff;
 }
 
 .social-links a:hover {
-    color: #fff;
-    text-shadow: 0 0 20px #00ffff;
-    transform: translateY(-4px);
+    color: #fff;
+    text-shadow: 0 0 20px #00ffff;
+    transform: translateY(-4px);
 }
