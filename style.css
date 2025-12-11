@@ -4,31 +4,23 @@
 |--------------------------------------------------------------------------
 */
 
-/* 1. Futuristic Font Import (Electrolize must be linked in index.html <head>) */
 body {
-    /* Deep Black Background */
     background-color: #0d0d0d; 
-    color: #f0f0f0; /* Light Gray Text */
+    color: #f0f0f0;
     font-family: 'Electrolize', sans-serif; 
     margin: 0;
-    padding: 20px;
+    /* Center content vertically and horizontally */
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Start content near the top */
+    padding: 20px 0; /* Padding top/bottom */
     min-height: 100vh;
-    /* Optional: Subtle background animation */
-    /* animation: background-pan 30s linear infinite alternate; */
 }
 
-/* 2. Custom Cursor (Needs a custom cursor image file) */
-/* Replace 'custom-cursor.png' with the actual file path */
-/* body {
-    cursor: url('custom-cursor.png'), auto; 
-} */
-
 .container {
-    max-width: 700px;
-    width: 100%;
-    /* Darker metallic base for the content area */
+    max-width: 600px; /* Reduced width to match the 'link-in-bio' style */
+    width: 90%;
+    /* Dark metallic base for the content area */
     background-color: #1a1a1a; 
     padding: 25px 30px;
     border-radius: 10px;
@@ -37,17 +29,41 @@ body {
     border: 1px solid #2c2c2c;
 }
 
-h1 {
+/* |--------------------------------------------------------------------------
+| NEW: PROFILE HEADER STYLES
+|--------------------------------------------------------------------------
+*/
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+    /* Add a ring effect like the reference site */
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.user-name {
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
     color: #00ffff; /* Bright Neon Cyan */
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-    margin-bottom: 35px;
+    margin: 0;
     letter-spacing: 2px;
 }
 
 /*
 |--------------------------------------------------------------------------
-| CATEGORY STYLES
+| CATEGORY & LINK STYLES (Kept Metallic/Neon)
 |--------------------------------------------------------------------------
 */
 
@@ -58,14 +74,14 @@ h1 {
 .category-section h2 {
     font-size: 1.2em;
     font-weight: bold;
-    color: #00ffff; /* Neon Title Color */
+    color: #00ffff; 
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-    /* Futuristic bottom border */
     border-bottom: 2px solid #00ffff; 
     padding-bottom: 8px;
     margin-bottom: 20px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    text-align: center; /* Center the category titles */
 }
 
 .category-icon {
@@ -75,24 +91,15 @@ h1 {
 }
 
 .category-section h2:hover .category-icon {
-    transform: rotate(5deg) scale(1.1); /* Subtle animation on category title hover */
+    transform: rotate(5deg) scale(1.1);
 }
 
-
-/*
-|--------------------------------------------------------------------------
-| LINK BOX STYLES (The Clickable Items)
-|--------------------------------------------------------------------------
-*/
-
-/* Link Boxes Layout */
 .links-grid {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Space between links */
+    gap: 15px; /* Increased gap slightly */
 }
 
-/* Link Box Appearance (Metallic Card) */
 .link-box {
     display: flex;
     justify-content: space-between;
@@ -105,11 +112,7 @@ h1 {
     border-radius: 8px;
     text-decoration: none;
     color: #f0f0f0;
-    
-    /* Smooth transition for animation effects */
     transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    /* Initial subtle metallic box shadow */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -120,40 +123,24 @@ h1 {
 }
 
 .arrow-icon {
-    color: #777; /* Default arrow color */
+    color: #777;
     font-size: 1em;
     transition: color 0.3s, transform 0.3s;
 }
 
-/* Link Box Hover Animation (The key feature) */
+/* Hover Animation */
 .link-box:hover {
-    /* Darken background slightly */
     background: linear-gradient(145deg, #353535, #222); 
-    /* Neon Glow Effect on Hover */
     box-shadow: 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.4); 
-    transform: translateY(-3px); /* Lift the box */
-    border-color: #00ffff; /* Highlight border with neon color */
+    transform: scale(1.02); /* Used scale instead of translate for a broader emphasis */
+    border-color: #00ffff;
 }
 
 .link-box:hover .link-text {
-    color: #00ffff; /* Text color change on hover */
+    color: #00ffff;
 }
 
 .link-box:hover .arrow-icon {
-    color: #00ffff; /* Arrow color change on hover */
-    transform: translateX(5px); /* Push the arrow slightly */
+    color: #00ffff;
+    transform: translateX(5px);
 }
-
-/*
-|--------------------------------------------------------------------------
-| OPTIONAL ANIMATIONS (Requires JavaScript for complex trails)
-|--------------------------------------------------------------------------
-*/
-
-/* Example Keyframe for a subtle background pan (if you use a texture image) */
-/*
-@keyframes background-pan {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-}
-*/
