@@ -4,14 +4,36 @@
 |--------------------------------------------------------------------------
 */
 
-/* Container for the animated background/snow effect (Requires particles.js) */
+/* Container for the animated background/snow effect (Requires particles.js or GIF) */
 #particles-js {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000; /* PURE BLACK BASE */
+    
+    /* ------------------------------------------------------------------- */
+    /* *** OPTION 1: GIF WALLPAPER BACKGROUND *** */
+    /* ------------------------------------------------------------------- */
+    
+    /* Uncomment the lines below to use a GIF or animated background image. */
+    /* NOTE: You must upload the GIF file (e.g., 'your-wallpaper.gif') to your repository. */
+    /*
+    background-image: url('og.gif'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    */
+    
+    /* ------------------------------------------------------------------- */
+    /* *** OPTION 2: PARTICLES.JS (Snow/Star Effect) *** */
+    /* ------------------------------------------------------------------- */
+    
+    /* If you are using particles.js (snow/star effect), keep these lines: */
+    background-color: #000000; /* PURE BLACK BASE for the animation to show on */
+    
+    /* ------------------------------------------------------------------- */
+    
     z-index: -1; 
 }
 
@@ -26,14 +48,15 @@ body {
     min-height: 100vh;
 }
 
-/* Custom Cursor Placeholder (Add your custom cursor CSS here) */
-/* body { cursor: url('custom-cursor.png'), auto; } */
+/* Custom Cursor */
+/* Replace 'cursor.png' with your custom image and uncomment the line below */
+/* body { cursor: url('cursor.png'), auto; } */
 
 
 .container {
     max-width: 650px; 
     width: 90%;
-    /* Dark, semi-transparent background to let the snow effect show through */
+    /* Semi-transparent background is essential to see any animation/GIF behind it */
     background-color: rgba(10, 10, 10, 0.95); 
     padding: 30px 35px;
     border-radius: 12px;
@@ -185,7 +208,7 @@ body {
     text-align: center;
     margin-top: 60px;
     padding-top: 25px;
-    border-top: 1px solid #00ffff; /* Neon divider */
+    border-top: 1px solid #00ffff;
     font-size: 0.85em;
     color: #666;
 }
