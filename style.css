@@ -1,146 +1,109 @@
 /*
 |--------------------------------------------------------------------------
-| GLOBAL & BASE STYLES
+| CONTACT FORM STYLES
 |--------------------------------------------------------------------------
 */
 
-body {
-    background-color: #0d0d0d; 
-    color: #f0f0f0;
-    font-family: 'Electrolize', sans-serif; 
-    margin: 0;
-    /* Center content vertically and horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Start content near the top */
-    padding: 20px 0; /* Padding top/bottom */
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 600px; /* Reduced width to match the 'link-in-bio' style */
-    width: 90%;
-    /* Dark metallic base for the content area */
-    background-color: #1a1a1a; 
-    padding: 25px 30px;
-    border-radius: 10px;
-    /* Neon Cyan Glow for the container */
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); 
-    border: 1px solid #2c2c2c;
-}
-
-/* |--------------------------------------------------------------------------
-| NEW: PROFILE HEADER STYLES
-|--------------------------------------------------------------------------
-*/
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover;
-    margin-bottom: 15px;
-    /* Add a ring effect like the reference site */
-    border: 3px solid #00ffff;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-}
-
-.user-name {
+.contact-section h2 {
+    /* Uses same style as category headings */
     text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #00ffff; /* Bright Neon Cyan */
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
-    margin: 0;
-    letter-spacing: 2px;
 }
 
-/*
-|--------------------------------------------------------------------------
-| CATEGORY & LINK STYLES (Kept Metallic/Neon)
-|--------------------------------------------------------------------------
-*/
-
-.category-section {
-    margin-top: 40px;
-}
-
-.category-section h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #00ffff; 
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-    border-bottom: 2px solid #00ffff; 
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-align: center; /* Center the category titles */
-}
-
-.category-icon {
-    color: #00ffff;
-    margin-right: 12px;
-    transition: transform 0.4s ease;
-}
-
-.category-section h2:hover .category-icon {
-    transform: rotate(5deg) scale(1.1);
-}
-
-.links-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Increased gap slightly */
-}
-
-.link-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 25px;
-    
-    /* Metallic Gradient Background */
-    background: linear-gradient(145deg, #2c2c2c, #1f1f1f); 
+.contact-form {
+    padding: 20px;
     border: 1px solid #444;
     border-radius: 8px;
-    text-decoration: none;
+    background-color: #222;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.1); /* Inner shadow for depth */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ffff;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #00ffff; /* Neon border for input fields */
+    border-radius: 5px;
+    background-color: #333; /* Dark input background */
     color: #f0f0f0;
-    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Electrolize', sans-serif;
+    transition: all 0.3s;
 }
 
-.link-text {
-    font-weight: 500;
-    font-size: 1.1em;
-    letter-spacing: 0.5px;
-}
-
-.arrow-icon {
-    color: #777;
-    font-size: 1em;
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Hover Animation */
-.link-box:hover {
-    background: linear-gradient(145deg, #353535, #222); 
-    box-shadow: 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.4); 
-    transform: scale(1.02); /* Used scale instead of translate for a broader emphasis */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
     border-color: #00ffff;
 }
 
-.link-box:hover .link-text {
-    color: #00ffff;
+/* Submit Button Styling */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00ffff, #00c3ff);
+    border: none;
+    border-radius: 5px;
+    color: #1a1a1a; /* Dark text for contrast */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    text-transform: uppercase;
 }
 
-.link-box:hover .arrow-icon {
+.submit-button:hover {
+    background: linear-gradient(90deg, #00e0e0, #00aaff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    transform: scale(1.01);
+}
+
+.submit-button i {
+    margin-right: 8px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| FOOTER & SOCIAL LINKS
+|--------------------------------------------------------------------------
+*/
+.site-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
     color: #00ffff;
-    transform: translateX(5px);
+    font-size: 1.8em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.social-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #00ffff;
+    transform: translateY(-2px);
 }
