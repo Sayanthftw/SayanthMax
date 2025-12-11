@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 */
 
-/* Container for the animated background/snow effect (Now using the GIF) */
+/* Container for the animated background/GIF */
 #particles-js {
     position: fixed;
     top: 0;
@@ -12,8 +12,9 @@
     width: 100%;
     height: 100%;
     
-    /* *** ACTIVATED GIF WALLPAPER BACKGROUND *** */
-    background-image: url('https://i.pinimg.com/originals/8e/14/55/8e145599d4847e339828787162952035.gif'); 
+    /* *** ACTIVATING GIF WALLPAPER BACKGROUND *** */
+    /* Assumes the GIF is saved in your repository as 'og.gif' */
+    background-image: url('og.gif'); 
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center;
