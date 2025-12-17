@@ -1,0 +1,127 @@
+:root {
+    --neon-red: #ff003c;
+    --dark-red: #2b000a;
+    --bg-black: #050505;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* Hide default cursor to use custom neon one */
+}
+
+body {
+    background-color: var(--bg-black);
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Moving Background Gradient */
+.bg-gradient {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at center, var(--dark-red) 0%, var(--bg-black) 80%);
+    z-index: -2;
+    animation: pulseBG 8s infinite alternate;
+}
+
+@keyframes pulseBG {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Neon Rain Canvas */
+#rainCanvas {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+/* Main Heading Animation */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 8vw;
+    color: white;
+    text-shadow: 0 0 10px var(--neon-red), 0 0 30px var(--neon-red);
+    letter-spacing: 10px;
+    position: relative;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    color: var(--neon-red);
+    z-index: -1;
+    filter: blur(15px);
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Button with Hover Glow */
+.main-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: 2px solid var(--neon-red);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: 0.4s ease;
+    background: rgba(255, 0, 60, 0.1);
+}
+
+.main-btn:hover {
+    background: var(--neon-red);
+    box-shadow: 0 0 50px var(--neon-red);
+    transform: translateY(-5px);
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--neon-red);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    box-shadow: 0 0 15px var(--neon-red);
+    z-index: 9999;
+    transition: transform 0.1s ease;
+}
+
+/* Sidebar */
+.side-bar {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    writing-mode: vertical-rl;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.side-bar a:hover { opacity: 1; color: var(--neon-red); }
